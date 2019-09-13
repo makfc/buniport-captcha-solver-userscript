@@ -19,7 +19,7 @@
         document.getElementById("signinForm:username").value = "";
     }
 
-    if (!!document.getElementById("signinForm:next")) {
+    if (document.getElementById("signinForm:username").value = "" && !!document.getElementById("signinForm:next")) {
         document.getElementById("signinForm:next").click();
     }
 
