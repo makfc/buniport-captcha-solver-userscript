@@ -9,7 +9,7 @@
 // @connect      ec2-18-139-209-106.ap-southeast-1.compute.amazonaws.com
 // @run-at       document-end
 // @grant        GM_xmlhttpRequest
-// @downloadURL  https://github.com/makfc/buniport-captcha-solver/raw/master/buniport_captcha.user.js
+// @downloadURL  https://raw.githubusercontent.com/makfc/buniport-captcha-solver-userscript/master/buniport_captcha.user.js
 // ==/UserScript==
 
 (async function () {
