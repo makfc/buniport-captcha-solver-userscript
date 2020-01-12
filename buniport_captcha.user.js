@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HKBU BUniPort captcha autofill
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Autofill captcha with Tesseract
 // @author       makfc
 // @match        https://iss.hkbu.edu.hk/buam/*signForm.seam*
@@ -25,12 +25,6 @@
 
     while (!document.getElementById("signinForm:KaptchaView")) {
         await new Promise(r => setTimeout(r, 500));
-    }
-
-    // stop message prompt
-    let ele = document.getElementById("settingHints");
-    if (ele !== null) {
-        ele.remove();
     }
 
     // stop auto refresh captcha
@@ -65,6 +59,9 @@
                 responseType: "json",
                 data: JSON.stringify({"data": canvas.toDataURL().split(',')[1]}),
                 onload: function (response) {
+                    // stop message prompt
+                    Richfaces.hideModalPanel('settingHints');
+                    
                     console.log(response.response);
 
                     document.getElementById("signinForm:recaptcha_response_field").value = response.response.captcha;
