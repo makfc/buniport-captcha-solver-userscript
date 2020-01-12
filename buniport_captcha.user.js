@@ -59,8 +59,10 @@
                 responseType: "json",
                 data: JSON.stringify({"data": canvas.toDataURL().split(',')[1]}),
                 onload: function (response) {
-                    // stop message prompt
-                    Richfaces.hideModalPanel('settingHints');
+                    if (!!document.getElementById("settingHints")) {
+                        // stop message prompt
+                        Richfaces.hideModalPanel('settingHints');
+                    }
                     
                     console.log(response.response);
 
