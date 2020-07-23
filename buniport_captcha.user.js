@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         HKBU BUniPort captcha autofill
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Autofill captcha with Tesseract
 // @author       makfc
 // @match        https://iss.hkbu.edu.hk/buam/*signForm.seam*
