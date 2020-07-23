@@ -6,7 +6,7 @@
 // @author       makfc
 // @match        https://iss.hkbu.edu.hk/buam/*signForm.seam*
 // @connect      iss.hkbu.edu.hk
-// @connect      ec2-13-250-40-22.ap-southeast-1.compute.amazonaws.com
+// @connect      ec2-54-179-228-184.ap-southeast-1.compute.amazonaws.com
 // @run-at       document-end
 // @grant        GM_xmlhttpRequest
 // @downloadURL  https://raw.githubusercontent.com/makfc/buniport-captcha-solver-userscript/master/buniport_captcha.user.js
@@ -54,7 +54,7 @@
             ctx.drawImage(img, x, y);
             GM_xmlhttpRequest({
                 method: "POST",
-                url: "http://ec2-13-250-40-22.ap-southeast-1.compute.amazonaws.com:61238/buniportCaptcha",
+                url: "http://ec2-54-179-228-184.ap-southeast-1.compute.amazonaws.com:61238/buniportCaptcha",
                 dataType: "json",
                 responseType: "json",
                 data: JSON.stringify({"data": canvas.toDataURL().split(',')[1]}),
